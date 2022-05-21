@@ -1,0 +1,56 @@
+[
+    {
+        "_id": 1,
+        "name": "Heavy Equuipment Parts",
+        "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/busines-area-1.jpg",
+        "available": 10000,
+        "minQnty": 500,
+        "pricePerUnit": 1099,
+        "description": "Hyunkook Parts works with the top heavy machinery manufacturers in the world to provide unbeatable prices, quality and service on genuine and aftermarket parts."
+    },
+    {
+        "_id": 2,
+        "name": "Engine Assembly & Parts",
+        "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/Engine-Assembly-parts-1.jpg",
+        "available": 150000,
+        "minQnty": 1000,
+        "pricePerUnit": 3099,
+        "description": "Get a wide variety of excavator engine & parts at wholesale prices and an added advantage of global shipping. Enjoy sampling an assortment of excavator engine & parts regardless of your budget constraints."
+    },
+    {
+        "_id": 3,
+        "name": "Hydraulic Components",
+        "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/Hydraulic-components.jpg",
+        "available": 20000,
+        "minQnty": 2000,
+        "pricePerUnit": 4099,
+        "description": "We supply Excavator Final Drive, Travel Device, Hydraulic Main Pump Parts, Hydraulic Swing Motor Reduction Gear, Travel Motor Reduction Gear."
+    },
+    {
+        "_id": 4,
+        "name": "Heavy Equuipment Parts",
+        "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/busines-area-1.jpg",
+        "available": 1000,
+        "minQnty": 500,
+        "pricePerUnit": 1099,
+        "description": "Hyunkook Parts works with the top heavy machinery manufacturers in the world to provide unbeatable prices, quality and service on genuine and aftermarket parts."
+    },
+    {
+        "_id": 5,
+        "name": "Heavy Equuipment Parts",
+        "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/busines-area-1.jpg",
+        "available": 1000,
+        "minQnty": 500,
+        "pricePerUnit": 1099,
+        "description": "Hyunkook Parts works with the top heavy machinery manufacturers in the world to provide unbeatable prices, quality and service on genuine and aftermarket parts."
+    },
+    {
+        "_id": 6,
+        "name": "Heavy Equuipment Parts",
+        "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/busines-area-1.jpg",
+        "available": 1000,
+        "minQnty": 500,
+        "pricePerUnit": 1099,
+        "description": "Hyunkook Parts works with the top heavy machinery manufacturers in the world to provide unbeatable prices, quality and service on genuine and aftermarket parts."
+    }
+]

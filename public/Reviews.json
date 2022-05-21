@@ -1,0 +1,30 @@
+[
+    {
+        "_id": 1,
+        "name": "John De",
+        "img": "",
+        "ratings": 5,
+        "comments": "Best Quality"
+    },
+    {
+        "_id": 2,
+        "name": "Nayim Paul",
+        "img": "",
+        "ratings": 5,
+        "comments": "Nice Customer Care Service"
+    },
+    {
+        "_id": 3,
+        "name": "Dipa Kaur",
+        "img": "",
+        "ratings": 5,
+        "comments": "Best quality"
+    },
+    {
+        "_id": 4,
+        "name": "Foysal Poddar",
+        "img": "",
+        "ratings": 3,
+        "comments": "Satisfactory"
+    }
+]

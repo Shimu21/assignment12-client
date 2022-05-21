@@ -6,7 +6,6 @@ import About from './Pages/About/About';
 import Footer from './Pages/Shared/Footer';
 import Login from './Pages/Auth/Login';
 import Blogs from './Pages/Blogs/Blogs';
-import Reviews from './Pages/Reviews/Reviews';
 import FAQ from './Pages/FAQ/FAQ';
 import Programs from './Pages/Programs/Programs';
 import Register from './Pages/Auth/Register';
@@ -16,15 +15,14 @@ import RequireAuth from './Pages/Auth/RequireAuth';
 
 function App() {
   return (
-    <div>
+    <div className='bg-[#071532]'>
       <Navbar></Navbar>
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
         <Route path="/blogs" element={<Blogs />} />
-        <Route path="/reviews" element={<Reviews />} />
         <Route path="/faq" element={<FAQ />} />
         <Route path="/programs" element=
           {

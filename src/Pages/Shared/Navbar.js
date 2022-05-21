@@ -3,13 +3,14 @@ import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Link } from 'react-router-dom';
 import auth from '../../firebase.init';
+import logo from '../../assets/Icons/webLogo.png';
 
 
 const Navbar = () => {
     const [user] = useAuthState(auth);
 
     return (
-        <div className="navbar bg-base-100">
+        <div className="navbar bg-primary text-white">
             <div className="navbar-start">
                 <div className="dropdown">
                     <label tabIndex="0" className="btn btn-ghost lg:hidden">
@@ -23,7 +24,6 @@ const Navbar = () => {
                         <li tabIndex="0">
                             <Link to="/programs" className="justify-between">
                                 Our Programs
-                                <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                             </Link>
                             <ul className="p-2">
                                 <li><Link to="/infant">Infant</Link></li>
@@ -40,7 +40,9 @@ const Navbar = () => {
                         }
                     </ul>
                 </div>
-                <Link to="/" className="btn btn-ghost normal-case text-xl">Bright Minds</Link>
+                <Link to="/" className="btn btn-ghost normal-case text-xl">
+                    <img className='h-[55px]' src={logo} alt="logo" />
+                </Link>
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal p-0">
@@ -49,7 +51,6 @@ const Navbar = () => {
                     <li tabIndex="0">
                         <Link to="/programs" className="justify-between">
                             Our Programs
-                            <svg className="fill-current" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M8.59,16.58L13.17,12L8.59,7.41L10,6L16,12L10,18L8.59,16.58Z" /></svg>
                         </Link>
 
                     </li>
