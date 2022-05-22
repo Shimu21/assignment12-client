@@ -11,7 +11,10 @@ const Products = () => {
     }, [])
     return (
         <div className='my-12 mx-12'>
-            <h1>Products</h1>
+            <div className=' text-[#FFC801] text-center mb-12'>
+                <h1 className='text-2xl font-bold'>MAIN PRODUCTS</h1>
+                <p><small>Hyunkook Parts is China Top Brand Solutions of Excavator Parts.</small></p>
+            </div>
             <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5'>
                 {
                     products.map(product => <Product
