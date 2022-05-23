@@ -1,6 +1,14 @@
-import React from 'react';
+import aos from 'aos';
+import React, { useEffect } from 'react';
 
 const Mission = () => {
+
+    useEffect(() => {
+        aos.init({
+            duration: 1000,
+        });
+    }, []);
+
     return (
         <div className='mb-28 mt-8'>
             <h1 className=' text-center text-xl font-bold text-[#FFC801]'>OUR MISSION</h1>
@@ -21,6 +29,13 @@ const Mission = () => {
                 We always keep an eye on the market situation and try to cope with Customers’ request and feedback prompt. So, we will always study how to meet the
                 customers that needs, how to reduce the original producing cost & how to upgrade Our Company System to meet world market situation. We will keep on eye
                 on Market Situation always. Eventually, We will do our best effort always to support our valuable customers strongly.</p>
+
+            <div data-aos="fade-right"
+                data-aos-offset="500"
+                data-aos-easing="ease-in-sine" >
+                <img src="https://cdn.shortpixel.ai/spai/w_505+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/4232452-scaled.jpg" />
+
+            </div>
         </div>
     );
 };

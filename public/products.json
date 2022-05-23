@@ -1,6 +1,5 @@
 [
     {
-        "_id": 1,
         "name": "Heavy Equuipment Parts",
         "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/busines-area-1.jpg",
         "availableQnty": 10000,
@@ -9,7 +8,6 @@
         "description": "Hyunkook Parts works with the top heavy machinery manufacturers in the world to provide unbeatable prices, quality and service on genuine and aftermarket parts."
     },
     {
-        "_id": 2,
         "name": "Engine Assembly & Parts",
         "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/Engine-Assembly-parts-1.jpg",
         "availableQnty": 150000,
@@ -18,7 +16,6 @@
         "description": "Get a wide variety of excavator engine & parts at wholesale prices and an added advantage of global shipping. Enjoy sampling an assortment of excavator engine & parts regardless of your budget constraints."
     },
     {
-        "_id": 3,
         "name": "Hydraulic Components",
         "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/Hydraulic-components.jpg",
         "availableQnty": 20000,
@@ -27,7 +24,6 @@
         "description": "We supply Excavator Final Drive, Travel Device, Hydraulic Main Pump Parts, Hydraulic Swing Motor Reduction Gear, Travel Motor Reduction Gear."
     },
     {
-        "_id": 4,
         "name": "Electrical Parts",
         "img": "https://cdn.shortpixel.ai/spai/w_289+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/03/Electrical-Parts.jpg",
         "availableQnty": 3000,
@@ -36,7 +32,6 @@
         "description": "Buy low priced Excavator Electric Parts from Excavator Electric Parts factory, We provide good quality Excavator Electric Parts from China. Buy low priced Excavator Electric Parts from Excavator Electric Parts factory, We provide good quality Excavator Electric Parts from China"
     },
     {
-        "_id": 5,
         "name": "HYDRAULIC CYLINDER SEAL KITS",
         "img": "https://cdn.shortpixel.ai/spai/w_413+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/04/excavator-hydraulic.jpg",
         "availableQnty": 40000,
@@ -45,7 +40,6 @@
         "description": "Excavator Hydraulic Cylinders,Which Means Are Boom/Arm/Bucket Cylinders.Aftermarket Mini Digger Seal Kits For Excavator Dipper Boom And Bucket Rams Supplied At Sensible Prices.."
     },
     {
-        "_id": 6,
         "name": "Slewing Ring Bearing",
         "img": "https://cdn.shortpixel.ai/spai/w_413+q_lossy+ret_img+to_webp/https://www.hyunkookparts.com/wp-content/uploads/2022/04/slewrings-bearing.jpg",
         "availableQnty": 2500,

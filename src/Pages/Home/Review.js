@@ -5,7 +5,11 @@ const Review = ({ review }) => {
     return (
         <div class="card bg-base-100 shadow-xl border-4 border-primary">
             <figure class="px-10 pt-10">
-                <img src={img} alt="" class="rounded-xl" />
+                <div class="avatar">
+                    <div class="w-12 rounded-full ring ring-primary ring-offset-base-100 ring-offset-2">
+                        <img src="https://api.lorem.space/image/face?hash=4818" alt='' />
+                    </div>
+                </div>
             </figure>
             <div class="card-body items-center text-center">
                 <h2 class="card-title">{name}</h2>

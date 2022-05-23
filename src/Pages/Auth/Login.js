@@ -9,6 +9,8 @@ const Login = () => {
     const [email, setEmail] = useState("");
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
+
+    // Sign In with email and PWD
     const [
         signInWithEmailAndPassword,
         user,
@@ -56,12 +58,12 @@ const Login = () => {
         <div className='flex h-screen justify-center items-center'>
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
-                    <h2 className="text-center text-2xl font-bold">Login</h2>
+                    <h2 className="text-center text-primary text-2xl font-bold">LOGIN</h2>
                     <form onSubmit={handleSubmit(onSubmit, handleReset)}>
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Email</span>
+                                <span className="label-text font-bold">Email</span>
                             </label>
                             <input
                                 onBlur={getEmail}
@@ -87,7 +89,7 @@ const Login = () => {
                         </div>
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
-                                <span className="label-text">Password</span>
+                                <span className="label-text font-bold">Password</span>
                             </label>
                             <input
                                 type="password"
@@ -111,14 +113,14 @@ const Login = () => {
                         </div>
 
                         {signInError}
-                        <input className='btn w-full max-w-xs text-white' type="submit" value="Login" />
+                        <input className='btn w-full max-w-xs text-white bg-primary' type="submit" value="Login" />
                     </form>
-                    <p><small>New to BMCC <Link className='text-primary' to="/register">Create New Account</Link></small></p>
+                    <p><small>New to The Parts Master ? <Link className='text-primary' to="/register">Create New Account</Link></small></p>
                     <p><small>Forget Password <Link to="" onClick={handleReset}>Reset Password</Link></small></p>
                     <div className="divider">OR</div>
                     <button
                         onClick={() => signInWithGoogle()}
-                        className="btn btn-outline"
+                        className="btn btn-outline bg-primary text-white"
                     >Continue with Google</button>
                 </div>
             </div>
