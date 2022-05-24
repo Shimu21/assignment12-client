@@ -59,8 +59,8 @@ const BusinessSummary = () => {
                 </div>
             </div>
 
-            <div class="container mt-20  bg-[#071532]">
-                <div class=" flex content-center items-center justify-between ">
+            <div className="container mt-20  bg-[#071532]">
+                <div className=" flex content-center items-center justify-between ">
                     {/*  B.Summary Part-2 (img) */}
                     <div className='mr-10 ml-10'>
                         <img className='shadow-xl border-4 border-[#103178] w-[150%] h-[150%]' src="https://www.vesleecn.com/data/watermark/20181119/5bf233c4a0583.png" alt="" />
@@ -69,9 +69,9 @@ const BusinessSummary = () => {
 
                     {/* B.Summary Part-2.1 */}
                     <div className='ml-10 mr-10'>
-                        <h1 class="text-2xl font-bold text-[#FFC801]">OUR STORY WITH MISSION VISION</h1>
+                        <h1 className="text-2xl font-bold text-[#FFC801]">OUR STORY WITH MISSION VISION</h1>
                         <p><small className='text-[#FFC801]'>Welcome  to visit our website of The Parts Master!</small></p>
-                        <p class="py-6 text-white">The Parts Master focuses on supplying Excavator genuine, OEM and after-sales parts. For the benefit of all our potential customers over the world, we will do our eternal & ultimate endeavor to supply optimized One-Stop Service Solutions according to customers’ needs.</p>
+                        <p className="py-6 text-white">The Parts Master focuses on supplying Excavator genuine, OEM and after-sales parts. For the benefit of all our potential customers over the world, we will do our eternal & ultimate endeavor to supply optimized One-Stop Service Solutions according to customers’ needs.</p>
 
 
                         <div className='text-[#FFC801] font-bold '>
@@ -85,7 +85,7 @@ const BusinessSummary = () => {
                             </ul>
                         </div>
                         <button
-                            class="btn btn-primary font-bold px-10 min-h-0 mb-8 border-1 border-white"><Link to="/contact"><small>CONTACT US !!!</small></Link>
+                            className="btn btn-primary font-bold px-10 min-h-0 mb-8 border-1 border-white"><Link to="/contact"><small>CONTACT US !!!</small></Link>
                         </button>
                     </div>
                 </div>

@@ -52,23 +52,23 @@ const Purchase = () => {
     }
 
     return (
-        <div class="hero min-h-screen bg-base-200">
-            <div class="hero-content flex-col lg:flex-row-reverse">
-                <div class="text-center lg:text-left">
-                    <h1 class="text-5xl font-bold">{name}</h1>
-                    <p class="py-6">{description}</p>
-                    <p class="py-6">Product have: {availableQnty}</p>
-                    <p class="py-6">You have to order more then: {minQnty}</p>
+        <div className="hero min-h-screen bg-base-200">
+            <div className="hero-content flex-col lg:flex-row-reverse">
+                <div className="text-center lg:text-left">
+                    <h1 className="text-5xl font-bold">{name}</h1>
+                    <p className="py-6">{description}</p>
+                    <p className="py-6">Product have: {availableQnty}</p>
+                    <p className="py-6">You have to order more then: {minQnty}</p>
                 </div>
-                <div class="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+                <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
                     <div >
-                        <form onSubmit={handleOrder} class="card-body">
-                            <input type="text" value={user?.displayName} class="input input-bordered w-full max-w-xs" />
-                            <input type="email" value={user.email} class="input input-bordered w-full max-w-xs" />
-                            <input type="number" name='phone' placeholder='phone number' class="input input-bordered w-full max-w-xs" required />
-                            <input type="text" value={name} class="input input-bordered w-full max-w-xs" />
-                            <input type="text" name='quantity' placeholder='Quantity' class="input input-bordered w-full max-w-xs" required />
-                            <input type="submit" value="Place Order" class="btn btn-primary w-full max-w-xs" />
+                        <form onSubmit={handleOrder} className="card-body">
+                            <input type="text" value={user?.displayName} className="input input-bordered w-full max-w-xs" />
+                            <input type="email" value={user.email} className="input input-bordered w-full max-w-xs" />
+                            <input type="number" name='phone' placeholder='phone number' className="input input-bordered w-full max-w-xs" required />
+                            <input type="text" value={name} className="input input-bordered w-full max-w-xs" />
+                            <input type="text" name='quantity' placeholder='Quantity' className="input input-bordered w-full max-w-xs" required />
+                            <input type="submit" value="Place Order" className="btn btn-primary w-full max-w-xs" />
                         </form>
                     </div>
                 </div>

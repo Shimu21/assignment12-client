@@ -7,11 +7,11 @@ import { HiOutlineMail } from 'react-icons/hi';
 const Contact = () => {
     return (
         <div>
-            <div class="hero min-h-screen" style={{ backgroundImage: `url(${contactImg})` }}>
-                <div class="hero-overlay bg-opacity-50"></div>
-                <div class="hero-content text-center text-neutral-content">
+            <div className="hero min-h-screen" style={{ backgroundImage: `url(${contactImg})` }}>
+                <div className="hero-overlay bg-opacity-50"></div>
+                <div className="hero-content text-center text-neutral-content">
                     <div>
-                        <h1 class="mb-5 text-5xl text-[#FFC801] font-bold">CONTACT </h1>
+                        <h1 className="mb-5 text-5xl text-[#FFC801] font-bold">CONTACT </h1>
                         <p className='text-white text-2xl text-center'>Your Reliable Source for Heavy Construction Equipment and Spare Parts</p>
                         <h1 className='text-3xl font-bold text-[#FFC801]  text-center mb-24 shadow-xl border-6 border-white'>CONTACT US (86) 188 2631 5313</h1>
                     </div>

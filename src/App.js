@@ -21,6 +21,10 @@ import Profile from './Pages/Profile/Profile';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Contact from './Pages/ContactUs/Contact';
+import ManageProducts from './Pages/Dashboard/ManageProducts';
+import ManageOrders from './Pages/Dashboard/ManageOrders';
+import AddProduct from './Pages/Dashboard/AddProduct';
+import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 
 
 
@@ -49,6 +53,10 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
+          <Route path="manageProducts" element={<ManageProducts></ManageProducts>}></Route>
+          <Route path="manageOrders" element={<ManageOrders></ManageOrders>}></Route>
+          <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
+          <Route path="makeAdmin" element={<MakeAdmin></MakeAdmin>}></Route>
         </Route>
 
         <Route path="/faq" element={<FAQ />} />
