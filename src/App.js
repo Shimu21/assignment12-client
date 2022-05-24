@@ -13,6 +13,8 @@ import Purchase from './Pages/Purchase/Purchase';
 import RequireAuth from './Pages/Auth/RequireAuth';
 import Dashboard from './Pages/Dashboard/Dashboard';
 import MyOrders from './Pages/Dashboard/MyOrders';
+import { ToastContainer } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
 import Profile from './Pages/Profile/Profile';
@@ -27,13 +29,14 @@ function App() {
     <div className='bg-[#071532]'>
       <Navbar></Navbar>
       <Routes>
+        <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
         <Route path="/mission" element={<Mission />} />
         <Route path="/vision" element={<Vision />} />
         <Route path="/about" element={<About />} />
         <Route path="/login" element={<Login />} />
         <Route path="/register" element={<Register />} />
-        <Route path="/purchase" element={<RequireAuth>
+        <Route path="/purchase/:productId" element={<RequireAuth>
           <Purchase />
         </RequireAuth>
         } />
@@ -53,6 +56,7 @@ function App() {
         <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer></Footer>
+      <ToastContainer />
     </div >
   );
 }

@@ -1,12 +1,12 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
+import useToken from '../../Hooks/useToken';
 
 const Login = () => {
-    const [email, setEmail] = useState("");
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
@@ -20,15 +20,12 @@ const Login = () => {
 
     // Reset PWD
     const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
+    const [token] = useToken(user || gUser);
 
     const handleReset = async (data) => {
         console.log(data.email);
         await sendPasswordResetEmail(data.email);
         alert('Sent email');
-    }
-
-    const getEmail = (event) => {
-        console.log(event);
     }
 
     let signInError;
@@ -37,10 +34,10 @@ const Login = () => {
     let from = location.state?.from?.pathname || "/";
 
     useEffect(() => {
-        if (user || gUser) {
+        if (token) {
             navigate(from, { replace: true });
         }
-    }, [user, gUser, from, navigate])
+    }, [token, from, navigate])
 
     if (loading || gLoading || sending) {
         return <Loading></Loading>
@@ -66,7 +63,6 @@ const Login = () => {
                                 <span className="label-text font-bold">Email</span>
                             </label>
                             <input
-                                onBlur={getEmail}
                                 name="email"
                                 type="email"
                                 placeholder="Your Email"
