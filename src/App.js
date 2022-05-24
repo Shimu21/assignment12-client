@@ -18,6 +18,7 @@ import MyProfile from './Pages/Dashboard/MyProfile';
 import Profile from './Pages/Profile/Profile';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
+import Contact from './Pages/ContactUs/Contact';
 
 
 
@@ -48,6 +49,7 @@ function App() {
         </Route>
 
         <Route path="/faq" element={<FAQ />} />
+        <Route path="/contact" element={<Contact />} />
         <Route path="/profile" element={<Profile />} />
       </Routes>
       <Footer></Footer>
