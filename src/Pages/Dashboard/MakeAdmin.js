@@ -17,7 +17,7 @@ const MakeAdmin = () => {
 
     return (
         <div>
-            <h2>This is My Order: {users?.length}</h2>
+            <h2 className='text-xl  text-[#FFC801]'>This is My Order: {users?.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>

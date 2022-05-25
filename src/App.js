@@ -1,6 +1,6 @@
 import './App.css';
 import Navbar from './Pages/Shared/Navbar';
-import { Routes, Route, Link, Router } from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 import Home from './Pages/Home/Home';
 import About from './Pages/About/About';
 import Footer from './Pages/Shared/Footer';
@@ -17,14 +17,13 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import AddReview from './Pages/Dashboard/AddReview';
 import MyProfile from './Pages/Dashboard/MyProfile';
-import Profile from './Pages/Profile/Profile';
-import AOS from 'aos';
 import 'aos/dist/aos.css';
 import Contact from './Pages/ContactUs/Contact';
 import ManageProducts from './Pages/Dashboard/ManageProducts';
 import ManageOrders from './Pages/Dashboard/ManageOrders';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
+import RequireAdmin from './Pages/Auth/RequireAdmin';
 
 
 
@@ -53,15 +52,31 @@ function App() {
           <Route index element={<MyOrders></MyOrders>}></Route>
           <Route path="review" element={<AddReview></AddReview>}></Route>
           <Route path="myProfile" element={<MyProfile></MyProfile>}></Route>
-          <Route path="manageProducts" element={<ManageProducts></ManageProducts>}></Route>
-          <Route path="manageOrders" element={<ManageOrders></ManageOrders>}></Route>
-          <Route path="addProduct" element={<AddProduct></AddProduct>}></Route>
-          <Route path="makeAdmin" element={<MakeAdmin></MakeAdmin>}></Route>
+          <Route path="manageProducts" element={
+            <RequireAdmin>
+              <ManageProducts></ManageProducts>
+            </RequireAdmin>
+          }></Route>
+          <Route path="manageOrders" element={
+            <RequireAdmin>
+              <ManageOrders></ManageOrders>
+            </RequireAdmin>
+          }></Route>
+          <Route path="addProduct" element={
+            <RequireAdmin>
+              <AddProduct></AddProduct>
+            </RequireAdmin>
+          }></Route>
+          <Route path="makeAdmin" element={
+            <RequireAdmin>
+              <MakeAdmin></MakeAdmin>
+            </RequireAdmin>
+          }></Route>
         </Route>
 
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/profile" element={<Profile />} />
+        <Route path="/myProfile" element={<MyProfile />} />
       </Routes>
       <Footer></Footer>
       <ToastContainer />

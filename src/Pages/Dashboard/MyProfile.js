@@ -3,7 +3,7 @@ import React from 'react';
 const MyProfile = () => {
     return (
         <div>
-            <h1 className='text-[#FFC801] font-bold '>MY PROFILE</h1>
+            <h1 className='text-xl  text-[#FFC801]'>My Profile</h1>
         </div>
     );
 };
