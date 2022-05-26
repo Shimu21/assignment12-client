@@ -1,23 +1,26 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
+import { useQuery } from 'react-query';
+import Loading from '../Shared/Loading';
 import AdminRow from './AdminRow';
 
 const MakeAdmin = () => {
-    const [users, setUser] = useState([]);
+    const { data: users, isLoading, refetch } = useQuery('users', () => fetch(`https://fierce-everglades-09233.herokuapp.com/user`, {
+        method: 'GET',
+        headers: {
+            'authorization': `Bearer ${localStorage.getItem('accessToken')}`
+        }
+    }).then(res =>
+        res.json()
+    )
+    )
+    if (isLoading) {
+        <Loading />
+    }
 
-    useEffect(() => {
-        fetch(`http://localhost:5000/user`, {
-            method: 'GET',
-            headers: {
-                'authorization': `Bearer ${localStorage.getItem('accessToken')}`
-            }
-        })
-            .then(res => res.json())
-            .then(data => setUser(data))
-    }, [])
 
     return (
         <div>
-            <h2 className='text-xl  text-[#FFC801]'>This is My Order: {users?.length}</h2>
+            <h2>This is My Order: {users?.length}</h2>
             <div className="overflow-x-auto">
                 <table className="table w-full">
                     <thead>
@@ -25,7 +28,7 @@ const MakeAdmin = () => {
                             <th></th>
                             <th>Name</th>
                             <th>Email</th>
-                            <th>Email</th>
+                            <th>manage</th>
                         </tr>
                     </thead>
                     <tbody>
@@ -33,6 +36,7 @@ const MakeAdmin = () => {
                             users?.map((user, index) => <AdminRow
                                 key={user._id} user={user}
                                 index={index}
+                                refetch={refetch}
                             ></AdminRow>)
                         }
                     </tbody>

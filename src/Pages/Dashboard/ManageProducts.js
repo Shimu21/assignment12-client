@@ -7,7 +7,7 @@ import ManageDeleteModal from './ManageDeleteModal';
 const ManageProducts = () => {
     const [deletingProduct, setDeletingProduct] = useState(null);
 
-    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('http://localhost:5000/product', {
+    const { data: products, isLoading, refetch } = useQuery('products', () => fetch('https://fierce-everglades-09233.herokuapp.com/product', {
         headers: {
             authorization: `Bearer ${localStorage.getItem('accessToken')}`
         }
@@ -25,10 +25,11 @@ const ManageProducts = () => {
                     <thead>
                         <tr>
                             <th></th>
-                            <th>Avatar</th>
+                            <th>Product img</th>
                             <th>Name</th>
-                            <th>Specialty</th>
-                            <th>Action</th>
+                            <th>Available</th>
+                            <th>Price</th>
+                            <th>manage</th>
                         </tr>
                     </thead>
                     <tbody>

@@ -1,27 +1,23 @@
 [
     {
-        "_id": 1,
         "name": "John De",
         "img": "https://daisyui.com/tailwind-css-component-profile-2@56w.png",
         "ratings": 5,
         "comments": "Best Quality"
     },
     {
-        "_id": 2,
         "name": "Nayim Paul",
         "img": "https://daisyui.com/tailwind-css-component-profile-3@56w.png",
         "ratings": 4,
         "comments": "Nice Customer Care Service"
     },
     {
-        "_id": 3,
         "name": "Dipa Kaur",
         "img": "https://daisyui.com/tailwind-css-component-profile-4@56w.png",
         "ratings": 5,
         "comments": "Best quality"
     },
     {
-        "_id": 4,
         "name": "Foysal Poddar",
         "img": "https://daisyui.com/tailwind-css-component-profile-5@56w.png",
         "ratings": 3,

@@ -34,7 +34,7 @@ const AddProduct = () => {
                         img: img
                     }
 
-                    fetch('http://localhost:5000/products', {
+                    fetch('https://fierce-everglades-09233.herokuapp.com/product', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',

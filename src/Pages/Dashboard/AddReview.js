@@ -32,7 +32,7 @@ const AddReview = () => {
                         img: img
                     }
                     // send to your database 
-                    fetch('http://localhost:5000/reviews', {
+                    fetch('https://fierce-everglades-09233.herokuapp.com/reviews', {
                         method: 'POST',
                         headers: {
                             'content-type': 'application/json',
@@ -57,14 +57,14 @@ const AddReview = () => {
 
     return (
         <div className='w-[70%] mx-auto'>
-            <h2 className='text-center mb-3'>Add Item</h2>
-            <form onSubmit={handleSubmit(onSubmit)} className="card-body">
-                <input className='input input-bordered w-full max-w-xs' value={user?.displayName} placeholder='name' {...register("name")} required />
-                <input className='input input-bordered w-full max-w-xs' placeholder='email' {...register("email")} value={user.email} readOnly />
+            <h2 className='text-xl text-center text-[#FFC801]'>Add Review</h2>
+            <form onSubmit={handleSubmit(onSubmit)} className="card-body items-center">
+                <input className='input input-bordered w-full max-w-xs font-bold' value={user?.displayName} placeholder='name' {...register("name")} required />
+                <input className='input input-bordered w-full max-w-xs font-bold' placeholder='email' {...register("email")} value={user.email} readOnly />
                 <input className='input input-bordered w-full max-w-xs' placeholder='rating' type="number" {...register("rating")} required />
                 <input className='input input-bordered w-full max-w-xs' placeholder='review' {...register("comment")} required />
-                <input className='input input-bordered w-full max-w-xs' type='file' {...register("img")} required />
-                <input className='btn btn-primary w-full max-w-xs' type="submit" value="Add Review" />
+                <input className='input input-bordered w-full max-w-xs font-bold' type='file' {...register("img")} required />
+                <input className='btn btn-primary w-full max-w-xs font-bold' type="submit" value="Add Review" />
             </form>
         </div>
     );

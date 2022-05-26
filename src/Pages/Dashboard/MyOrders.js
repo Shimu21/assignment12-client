@@ -10,7 +10,7 @@ const MyOrders = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch(`http://localhost:5000/order?email=${user?.email}`, {
+        fetch(`https://fierce-everglades-09233.herokuapp.com/order?email=${user?.email}`, {
             method: 'GET',
             headers: {
                 'authorization': `Bearer ${localStorage.getItem('accessToken')}`

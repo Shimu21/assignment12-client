@@ -11,7 +11,7 @@ const Purchase = () => {
     const { name, availableQnty, minQnty, pricePerUnit, description, } = product;
 
     useEffect(() => {
-        fetch(`http://localhost:5000/product/${productId}`)
+        fetch(`https://fierce-everglades-09233.herokuapp.com/product/${productId}`)
             .then(res => res.json())
             .then(data => setProduct(data))
     }, [productId])
@@ -33,7 +33,7 @@ const Purchase = () => {
         }
 
         if (quantity <= availableQnty && quantity >= minQnty) {
-            fetch(`http://localhost:5000/order`, {
+            fetch(`https://fierce-everglades-09233.herokuapp.com/order`, {
                 method: "POST",
                 headers: {
                     'content-type': 'application/json'
