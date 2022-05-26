@@ -24,6 +24,8 @@ import ManageOrders from './Pages/Dashboard/ManageOrders';
 import AddProduct from './Pages/Dashboard/AddProduct';
 import MakeAdmin from './Pages/Dashboard/MakeAdmin';
 import RequireAdmin from './Pages/Auth/RequireAdmin';
+import NotFound from './Pages/NotFound/NotFound';
+import MyResume from './Pages/MyResume/MyResume';
 
 
 
@@ -76,7 +78,8 @@ function App() {
 
         <Route path="/faq" element={<FAQ />} />
         <Route path="/contact" element={<Contact />} />
-        <Route path="/myProfile" element={<MyProfile />} />
+        <Route path="/myResume" element={<MyResume />} />
+        <Route path="*" element={<NotFound></NotFound>} />
       </Routes>
       <Footer></Footer>
       <ToastContainer />
