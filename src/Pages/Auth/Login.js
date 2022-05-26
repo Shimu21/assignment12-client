@@ -1,12 +1,14 @@
-import React, { useEffect } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useSendPasswordResetEmail, useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import { useForm } from "react-hook-form";
 import auth from '../../firebase.init';
 import Loading from '../Shared/Loading';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import useToken from '../../Hooks/useToken';
+import { toast } from 'react-toastify';
 
 const Login = () => {
+    const [resetEmail, setEmail] = useState('')
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
     const { register, formState: { errors }, handleSubmit } = useForm();
 
@@ -22,10 +24,11 @@ const Login = () => {
     const [sendPasswordResetEmail, sending, resetError] = useSendPasswordResetEmail(auth);
     const [token] = useToken(user || gUser);
 
-    const handleReset = async (data) => {
-        console.log(data.email);
-        await sendPasswordResetEmail(data.email);
-        alert('Sent email');
+    const handleReset = async () => {
+        if (resetEmail) {
+            await sendPasswordResetEmail(resetEmail);
+            toast('Reset email password send');
+        }
     }
 
     let signInError;
@@ -48,6 +51,7 @@ const Login = () => {
     }
 
     const onSubmit = data => {
+        setEmail(data?.email);
         signInWithEmailAndPassword(data.email, data.password);
     }
 
@@ -56,7 +60,7 @@ const Login = () => {
             <div className="card w-96 bg-base-100 shadow-xl">
                 <div className="card-body">
                     <h2 className="text-center text-primary text-2xl font-bold">LOGIN</h2>
-                    <form onSubmit={handleSubmit(onSubmit, handleReset)}>
+                    <form onSubmit={handleSubmit(onSubmit)}>
 
                         <div className="form-control w-full max-w-xs">
                             <label className="label">
